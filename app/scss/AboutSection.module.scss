@@ -1,0 +1,151 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background-color: $dental-gray;
+}
+
+.grid {
+    display: grid;
+    gap: 4rem; // gap-16
+    align-items: center;
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.mainImage {
+    border-radius: 1rem; // rounded-2xl
+    width: 100%;
+    box-shadow: $shadow-lg;
+}
+
+.expBadge {
+    display: none; // hidden
+
+    @media (min-width: 768px) {
+        display: block; // md:block
+        position: absolute;
+        bottom: -1.5rem;
+        right: -1.5rem;
+        background-color: $dental-gold;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: $shadow-md;
+        z-index: 10;
+    }
+}
+
+.expValue {
+    font-size: 2.25rem; // text-4xl
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $secondary-foreground;
+    margin: 0;
+}
+
+.expLabel {
+    font-size: 0.875rem; // text-sm
+    font-weight: 600;
+    color: rgba($secondary-foreground, 0.8);
+    margin: 0;
+}
+
+.awardBadge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: $primary;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.awardText {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $primary-foreground;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.subtitle {
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+
+    span {
+        color: $dental-teal;
+    }
+}
+
+.desc {
+    color: $muted-foreground;
+    margin-bottom: 1.5rem;
+}
+
+.featuresGrid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.featureIconWrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba($dental-teal, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.featureIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: $dental-teal;
+}
+
+.featureText {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $foreground;
+    margin: 0;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, $dental-gold 0%, $dental-gold-light 100%);
+    color: $secondary-foreground;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

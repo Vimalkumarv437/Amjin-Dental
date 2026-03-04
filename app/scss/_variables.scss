@@ -1,0 +1,48 @@
+// Fonts
+$font-heading: "Playfair Display", serif;
+$font-body: "DM Sans", sans-serif;
+
+// Colors
+$background: hsl(0, 0%, 100%);
+$foreground: hsl(222.2, 84%, 4.9%);
+
+$primary: hsl(221.2, 83.2%, 53.3%);
+$primary-foreground: hsl(210, 40%, 98%);
+
+$secondary: hsl(210, 40%, 96.1%);
+$secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+
+$muted: hsl(210, 40%, 96.1%);
+$muted-foreground: hsl(215.4, 16.3%, 46.9%);
+
+$accent: hsl(210, 40%, 96.1%);
+$accent-foreground: hsl(222.2, 47.4%, 11.2%);
+
+$destructive: hsl(0, 84.2%, 60.2%);
+$destructive-foreground: hsl(210, 40%, 98%);
+
+$border: hsl(214.3, 31.8%, 91.4%);
+$input: hsl(214.3, 31.8%, 91.4%);
+$ring: hsl(221.2, 83.2%, 53.3%);
+
+// Dental Custom Colors
+$dental-navy: #0f172a; // Extracted from gradient
+$dental-navy-light: #1e293b; 
+$dental-gold: #d4af37;
+$dental-gold-light: #f4d03f;
+$dental-teal: #0d9488;
+$dental-teal-light: #2dd4bf;
+$dental-gray: #f8fafc;
+$dental-dark: #020617;
+
+// Border Radius
+$radius-lg: 0.5rem;
+$radius-md: calc(0.5rem - 2px);
+$radius-sm: calc(0.5rem - 4px);
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+$shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.5); // Used in HeroSection shadow-2xl

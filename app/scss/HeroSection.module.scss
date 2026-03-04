@@ -1,0 +1,169 @@
+@use 'variables' as *;
+
+.hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba($primary, 0.8) 0%, rgba($primary, 0.5) 50%, transparent 100%);
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    padding: 5rem 1rem; // py-20 px-4
+}
+
+.grid {
+    display: grid;
+    gap: 3rem; // gap-12
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.welcomeText {
+    color: $dental-gold;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary-foreground;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+        font-size: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 3.75rem;
+    }
+
+    span {
+        color: $dental-gold;
+    }
+}
+
+.description {
+    color: rgba($primary-foreground, 0.8);
+    font-size: 1.125rem;
+    max-width: 32rem; // max-w-lg
+    margin-bottom: 2rem;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btnPrimary {
+    color: $secondary-foreground;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btnOutline {
+    border: 2px solid rgba($primary-foreground, 0.3);
+    color: $primary-foreground;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba($primary-foreground, 0.1);
+    }
+}
+
+.appointmentCard {
+    background-color: $background;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: $shadow-2xl;
+}
+
+.formTitle {
+    font-size: 1.25rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.25rem;
+}
+
+.formSubtitle {
+    font-size: 1.5rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $dental-gold;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid $border;
+    background-color: $muted;
+    color: $foreground;
+    font-size: 0.875rem;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $dental-teal;
+    }
+}
+
+.submitBtn {
+    width: 100%;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

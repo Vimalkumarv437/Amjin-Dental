@@ -1,0 +1,122 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background-color: $dental-gray;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem; // mb-14
+}
+
+.subtitle {
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    span {
+        color: $dental-teal;
+    }
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem; // gap-6
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.card {
+    background-color: $background;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: $shadow-xl;
+
+        .imageContainer img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.imageContainer {
+    position: relative;
+    height: 14rem; // h-56
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        transition: transform 0.5s;
+    }
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $dental-teal;
+    background-color: rgba($dental-teal, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: $muted-foreground;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.cardTitle {
+    font-size: 1.125rem; // text-lg
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $dental-teal;
+    }
+}
+
+.desc {
+    color: $muted-foreground;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.readMore {
+    color: $dental-teal;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.2s;
+
+    &:hover {
+        gap: 0.5rem;
+    }
+}

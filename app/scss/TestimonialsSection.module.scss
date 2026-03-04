@@ -1,0 +1,143 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background-color: $background;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem; // mb-14
+}
+
+.subtitle {
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    span {
+        color: $dental-teal;
+    }
+}
+
+.carousel {
+    max-width: 48rem; // max-w-3xl
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.card {
+    background-color: $dental-gray;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        padding: 3rem;
+    }
+}
+
+.quoteIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: $dental-gold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    color: $foreground;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.625;
+    margin-bottom: 2rem;
+}
+
+.authorImg {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.authorName {
+    font-size: 1.125rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary;
+}
+
+.authorRole {
+    color: $dental-teal;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+}
+
+.star {
+    width: 1rem;
+    height: 1rem;
+    fill: $dental-gold;
+    color: $dental-gold;
+}
+
+.navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background-color: $background;
+    box-shadow: $shadow-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $foreground;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $dental-teal;
+        color: white;
+    }
+}
+
+.prevBtn {
+    left: 0;
+    transform: translateY(-50%) translateX(-1rem);
+}
+
+.nextBtn {
+    right: 0;
+    transform: translateY(-50%) translateX(1rem);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: $border;
+    transition: background-color 0.2s;
+
+    &.active {
+        background-color: $dental-teal;
+    }
+}

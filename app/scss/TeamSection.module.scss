@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background-color: $dental-gray;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem; // mb-14
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem; // gap-6
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.card {
+    background-color: $background;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: $shadow-sm;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: $shadow-xl;
+
+        .image {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.imageWrapper {
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 18rem; // h-72
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.role {
+    color: $dental-teal;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+}
+
+.name {
+    font-size: 1.125rem; // text-lg
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.socialIcon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: $dental-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $muted-foreground;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+        background-color: $dental-teal;
+        color: white;
+    }
+
+    svg {
+        width: 0.875rem;
+        height: 0.875rem;
+    }
+}

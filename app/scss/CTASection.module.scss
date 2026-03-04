@@ -1,0 +1,56 @@
+@use 'variables' as *;
+
+.section {
+    padding: 4rem 0; // py-16
+    background: linear-gradient(135deg, $dental-navy 0%, $dental-navy-light 100%);
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem; // gap-6
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary-foreground;
+
+    @media (min-width: 768px) {
+        font-size: 1.875rem;
+    }
+
+    span {
+        color: $dental-gold;
+    }
+}
+
+.desc {
+    color: rgba($primary-foreground, 0.7);
+    margin-top: 0.5rem;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, $dental-gold 0%, $dental-gold-light 100%);
+    color: $secondary-foreground;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,110 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background: linear-gradient(135deg, $dental-navy 0%, $dental-navy-light 100%);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem; // mb-14
+}
+
+.subtitle {
+    color: $dental-gold;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem; // mb-3
+}
+
+.title {
+    font-size: 1.875rem;
+    line-height: normal;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary-foreground;
+
+    @media (min-width: 768px) {
+        font-size: 2.25rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 3rem;
+    }
+
+    span {
+        color: $dental-gold;
+    }
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem; // gap-6
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.card {
+    position: relative;
+    background-color: rgba($primary-foreground, 0.05);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba($primary-foreground, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba($primary-foreground, 0.1);
+    }
+}
+
+.stepNum {
+    font-size: 3.75rem; // text-6xl
+    font-family: $font-heading;
+    font-weight: 700;
+    color: rgba($primary-foreground, 0.1);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.iconWrapper {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    background-color: rgba($dental-gold, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.25rem;
+}
+
+.icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: $dental-gold;
+}
+
+.cardTitle {
+    font-size: 1.125rem; // text-lg
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary-foreground;
+    margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+    color: rgba($primary-foreground, 0.7);
+    font-size: 0.875rem;
+}

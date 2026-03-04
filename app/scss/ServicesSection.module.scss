@@ -1,0 +1,112 @@
+@use 'variables' as *;
+
+.section {
+    padding: 5rem 0; // py-20
+    background-color: $background;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3.5rem; // mb-14
+}
+
+.subtitle {
+    margin-bottom: 0.75rem; // mb-3
+}
+
+.title {
+    span {
+        color: $dental-teal;
+    }
+}
+
+.description {
+    color: $muted-foreground;
+    margin-top: 1rem;
+    max-width: 42rem; // max-w-2xl
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem; // gap-6
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.card {
+    background-color: $background;
+    border: 1px solid $border;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $shadow-xl;
+        border-color: rgba($dental-teal, 0.3);
+
+        .iconWrapper {
+            background-color: $dental-teal;
+            color: $accent-foreground;
+
+            svg {
+                color: $accent-foreground;
+            }
+        }
+    }
+}
+
+.iconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background-color: rgba($dental-teal, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: colors 0.3s;
+    color: $dental-teal;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: color 0.3s;
+    }
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+    color: $muted-foreground;
+    font-size: 0.875rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2.5rem; // mt-10
+}
+
+.exploreLink {
+    color: $dental-teal;
+    font-weight: 600;
+    font-size: 0.875rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
